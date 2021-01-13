@@ -1,1 +1,24 @@
-<p>{{nombre}}</p>
+<div class="card-content">
+  <div class="card-img">
+    <img src="https://placeimg.com/380/230/nature" alt="">
+    <span><h4>{{position}}</h4></span>
+  </div>
+  <div class="card-desc">
+    <h3>{{destino.nombre}}</h3>
+    <p>Servicios</p>
+    <ul>
+      <li *ngFor="let s of destino.servicios">
+        <span [ngSwitch]="s">
+          <i *ngSwitchCase="'desayuno'" style="color: red;">{{s}}</i>
+          <!--en caso que se encuentre-->
+          <i *ngSwitchDefault>{{s}}</i>
+          <!--por defecto se ejecuta-->
+        </span>
+      </li>
+    </ul>
+    <a (click)="ir()" href="#" class="btn-card">ir</a>
+    <span *ngIf="destino.isSelected()">
+      <span ngNonBindable>--PREFERIDO--</span> <!--para no usar los bind de angular-->
+    </span>
+  </div>
+</div>
