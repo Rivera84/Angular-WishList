@@ -16,3 +16,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Instalación de Bootstrap
 comando: "npm install -s bootstrap"
+
+## Instalación de libreria store (Redux)
+npm install --save @ngrx/store @ngrx/effects
+
+## Instalar ngrx DevTools
+npm install --save @ngrx/store-devtools
+
